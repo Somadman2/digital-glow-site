@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>IT Services - The Digital Glow</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="images/logo.png" type="image/jpeg" />
+</head>
+<body class="is-preload">
+
+<div id="page-wrapper">
+
+  <!-- Header -->
+  <header id="header" class="alt">
+    <h1><a href="index.html">TDG</a></h1>
+    <nav><a href="#menu">Menu</a></nav>
+  </header>
+
+  <!-- Nav -->
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="it.html">IT Services</a></li>
+      <li><a href="solar.html">Solar Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- IT Hero Section -->
+  <section id="it-hero">
+    <div class="circuit-animation">
+      <div class="pulse-line"></div>
+      <div class="pulse-line delay-1"></div>
+      <div class="pulse-line delay-2"></div>
+    </div>
+    <div class="intro-text">
+      <h2>IT Services</h2>
+      <p>Powering your digital transformation with smart, scalable technologies.</p>
+    </div>
+  </section>
+
+  <!-- IT Services Cards -->
+  <section class="wrapper style2 fade-up">
+    <div class="container">
+      <header class="major" style="text-align: center;">
+        <h2>IT Services</h2>
+        <p>Powering your digital transformation with modern, scalable solutions.</p>
+      </header>
+
+      <div class="row gtr-50 gtr-uniform cards-container">
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/automation.png" alt="Automation" class="card-icon" />
+            <h3>Automation</h3>
+            <p>Streamline workflows and reduce manual effort using smart systems and integrations.</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/web-dev.jpg" alt="Web Design" class="card-icon" />
+            <h3>Website Design & Development</h3>
+            <p>Stunning, fast, and SEO-optimized websites tailored for your business goals.</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/mobile-dev.jpg" alt="Mobile Development" class="card-icon" />
+            <h3>Mobile Development</h3>
+            <p>Custom mobile apps for Android and iOS, built for performance and usability.</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/ecommerce.jpg" alt="E-commerce" class="card-icon" />
+            <h3>E-commerce Integrations</h3>
+            <p>Secure payment gateways, custom checkouts, and online store setup.</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/network.jpg" alt="Networking" class="card-icon" />
+            <h3>Networking</h3>
+            <p>Reliable and secure network setup, maintenance, and troubleshooting.</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-6-medium col-12-small scroll-reveal">
+          <div class="it-service-card">
+            <img src="images/security.jpg" alt="Security" class="card-icon" />
+            <h3>Security & Data Protection</h3>
+            <p>Advanced cybersecurity tools to protect your systems and user data and be compliant.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="inner">
+      <h2 class="major">Get in Touch</h2>
+      <p>Let’s work together! Contact us for partnerships, services or inquiries — we’re ready to glow with you.</p>
+      <ul class="contact">
+        <li class="icon solid fa-home">The Digital Glow<br />Gaborone, Botswana</li>
+        <li class="icon solid fa-phone"><a href="tel:+26774759991">+267 7475 9991</a></li>
+        <li class="icon solid fa-phone"><a href="tel:+2673930392">+267 393 0392</a></li>
+        <li class="icon solid fa-envelope"><a href="mailto:darylnekati10@gmail.com">darylnekati10@gmail.com</a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; 2024 The Digital Glow. All rights reserved.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  // Scroll reveal animation
+  document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>

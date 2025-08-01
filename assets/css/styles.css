@@ -1,0 +1,82 @@
+:root {
+  --primary: #011936;
+  --accent: #D1F9F9;
+  --highlight: #FFD700;
+}
+
+/* Base */
+body {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* Header */
+#logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+header#header.alt h1 a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* Lightbulb Icon */
+.flicker-staged {
+  font-size: 160px;
+  color: var(--highlight);
+  animation: stagedGlow 10s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes stagedGlow {
+  0%   { opacity: 0.1; filter: brightness(30%); }
+  20%  { opacity: 0.3; filter: brightness(50%); }
+  40%  { opacity: 0.5; filter: brightness(75%); }
+  60%  { opacity: 0.7; filter: brightness(100%); }
+  80%  { opacity: 0.9; filter: brightness(120%); }
+  100% { opacity: 1;   filter: brightness(140%); }
+}
+
+/* Service Cards */
+.service-card-link {
+  text-decoration: none;
+}
+
+.service-card {
+  background: var(--accent);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img.card-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: var(--highlight);
+}

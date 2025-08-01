@@ -1,0 +1,543 @@
+:root {
+  --primary: #011936;
+  --accent: #ffffff;
+  --highlight: #FFD700;
+}
+
+body {
+  background-color: var(--accent);
+  color: white;
+}
+
+#logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+header#header.alt h1 a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.flicker-staged {
+  font-size: 160px;
+  color: var(--highlight);
+  animation: stagedGlow 10s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes stagedGlow {
+  0%   { opacity: 0.1; filter: brightness(30%); }
+  20%  { opacity: 0.3; filter: brightness(50%); }
+  40%  { opacity: 0.5; filter: brightness(75%); }
+  60%  { opacity: 0.7; filter: brightness(100%); }
+  80%  { opacity: 0.9; filter: brightness(120%); }
+  100% { opacity: 1;   filter: brightness(140%); }
+}
+
+/* === INDEX PAGE CARD STYLES === */
+.service-card-link {
+  text-decoration: none;
+}
+
+.service-card {
+  background: white;
+  border-radius: 18px;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--accent);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img.card-icon {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+   border-top-left-radius: 18px;   /* Rounded corners for top of image */
+  border-top-right-radius: 18px;
+}
+
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* === IT PAGE CARD STYLES (separate) === */
+.it-service-card {
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+  border-bottom: 4px solid var(--accent);
+}
+
+.it-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.it-service-card img.card-icon {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.it-service-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  padding: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.it-service-card:hover h3 {
+  color: var(--highlight);
+}
+.it-service-card-link {
+  text-decoration: none;
+}
+.it-service-card p {
+  color: var(--primary);
+  font-size: 0.9rem;
+  padding: 0 1rem 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.about-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.about-logo {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+.about-logo:hover {
+  transform: scale(1.03);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+/* Timeline Styles */
+.timeline-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 60px 0;
+  margin-top: 3rem;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--highlight);
+  z-index: 1;
+}
+
+.timeline-node {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  width: 130px;
+  text-align: center;
+}
+
+.timeline-node .timeline-content {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-node:hover .timeline-content {
+  transform: translateY(-10px);
+}
+
+.timeline-node i {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.timeline-node h4 {
+  font-size: 1rem;
+  color: var(--primary);
+  margin: 6px 0 4px;
+}
+
+.timeline-node p {
+  font-size: 0.85rem;
+  color: #000;
+  margin: 0;
+}
+
+/* Our Clients Section */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 30s linear infinite;
+  gap: 60px;
+}
+
+.logo-track img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.logo-track img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .timeline-horizontal {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .timeline-track {
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 4px;
+  }
+
+  .timeline-node {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+/* === SOLAR SECTION STYLES === */
+body.solar {
+  background: linear-gradient(to bottom, #071C38, #011936);
+  color: white;
+}
+
+body.solar #page-wrapper {
+  background: transparent;
+}
+
+/* Solar Hero Section */
+#solar-hero {
+  background: transparent;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sun-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 2rem;
+}
+
+.sun {
+  width: 90px;
+  height: 90px;
+  background-color: var(--highlight);
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.orbit {
+  position: absolute;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.orbit-1 {
+  width: 130px;
+  height: 130px;
+  top: 25px;
+  left: 25px;
+  animation: spin 8s linear infinite;
+}
+
+.orbit-2 {
+  width: 160px;
+  height: 160px;
+  top: 10px;
+  left: 10px;
+  animation: spin 10s linear infinite reverse;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Intro Text */
+.intro-text h2 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Solar Services Section */
+#solar-services {
+  background: transparent;
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+}
+
+#solar-services h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.solar-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.solar-item {
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.solar-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Reveal on Scroll */
+.scroll-reveal {
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.solar-service-card {
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-bottom: 4px solid var(--accent);
+}
+
+.solar-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.solar-service-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.solar-service-card p {
+  color: var(--primary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.solar-service-card img.card-icon {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+#it-hero {
+  /*background-color: var(--primary);*/
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circuit-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+  animation: circuitPulse 8s linear infinite;
+}
+
+.pulse-line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--highlight);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: pulseLineMove 4s linear infinite;
+  opacity: 0.4;
+}
+
+.pulse-line.delay-1 {
+  top: 30%;
+  animation-delay: 1s;
+}
+.pulse-line.delay-2 {
+  top: 70%;
+  animation-delay: 2s;
+}
+
+@keyframes circuitPulse {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 60px 60px, 60px 60px;
+  }
+}
+
+@keyframes pulseLineMove {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(100%) translateY(-50%);
+    opacity: 0;
+  }
+}
+
+#it-hero .intro-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+#it-hero .intro-text h2 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+}
+
+#it-hero .intro-text p {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
